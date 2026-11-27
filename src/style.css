@@ -1,0 +1,95 @@
+.hj {
+  --hj-line: rgba(128, 128, 128, 0.35);
+  --hj-good: #3a9d6f;
+  --hj-bad: #d0482a;
+  display: grid;
+  gap: 1.25rem;
+}
+.hj-drop {
+  display: grid;
+  gap: 0.6rem;
+  justify-items: center;
+  padding: clamp(1.5rem, 6vw, 3rem);
+  border: 2px dashed var(--hj-line);
+  border-radius: 14px;
+  text-align: center;
+}
+.hj-drop.is-dragging {
+  border-color: var(--hj-good);
+  background: rgba(58, 157, 111, 0.08);
+}
+.hj-drop-hint {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.72;
+}
+.hj-file-label {
+  display: inline-block;
+  padding: 0.55rem 1.1rem;
+  border: 1px solid var(--hj-line);
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.92rem;
+}
+.hj-file-label input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+.hj-status {
+  margin: 0;
+}
+.hj-status.is-error {
+  padding-left: 0.5rem;
+  border-left: 3px solid var(--hj-bad);
+}
+.hj-controls {
+  display: grid;
+  gap: 0.5rem;
+  max-width: 28rem;
+}
+.hj-field {
+  display: grid;
+  gap: 0.3rem;
+  font-size: 0.92rem;
+}
+.hj-preview {
+  display: grid;
+  justify-items: center;
+}
+.hj-picture {
+  max-width: 100%;
+  height: auto;
+  background: repeating-conic-gradient(#e6e6e6 0 25%, #fff 0 50%) 0 0 / 16px 16px;
+  border: 1px solid var(--hj-line);
+  border-radius: 6px;
+}
+.hj-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.hj-button {
+  padding: 0.45rem 1rem;
+  border: 1px solid var(--hj-line);
+  border-radius: 999px;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+.hj-field select {
+  font: inherit;
+  padding: 0.35rem 0.5rem;
+  border: 1px solid var(--hj-line);
+  border-radius: 8px;
+  background: transparent;
+  color: inherit;
+}
+.hj-field select option {
+  color: #111;
+}

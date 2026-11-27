@@ -1,0 +1,8 @@
+withnate-heic-to-jpg v0.1.0
+js   12575 bytes
+css  2036 bytes
+
+Drop both, and the heic/ folder, into the site's assets directory and reference them from the
+page. The script is a plain IIFE - no module, no defer requirement beyond
+the site's own convention. It does nothing unless the page contains an
+element with a data-hj attribute. Its value is the URL of the heic/ folder.

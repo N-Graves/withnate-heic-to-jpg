@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HEIC to JPG converter — With Nate</title>
+    <link rel="stylesheet" href="demo.css" />
+    <link rel="stylesheet" href="../dist/heic-to-jpg.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <p class="eyebrow">Free tool</p>
+      <h1>HEIC to JPG, in your browser</h1>
+      <div class="hj" data-hj="../dist/heic/">
+        <div class="hj-drop" data-hj-drop>
+          <p><strong>Drop a HEIC photo here</strong></p>
+          <label class="hj-file-label">
+            Choose a file
+            <input type="file" accept=".heic,.heif,image/heic,image/heif" />
+          </label>
+          <p class="hj-drop-hint">It is converted on this page. Nothing is uploaded.</p>
+        </div>
+
+        <p class="hj-status" data-hj-status hidden></p>
+
+        <div class="hj-controls" data-hj-controls hidden>
+          <label class="hj-field">
+            <span>Save as</span>
+            <select data-hj-format>
+              <option value="jpeg" selected>JPG (smaller, for sharing)</option>
+              <option value="png">PNG (lossless, keeps transparency)</option>
+            </select>
+          </label>
+          <label class="hj-field">
+            <span data-hj-quality-label>Quality: 92</span>
+            <input type="range" min="50" max="100" step="1" value="92" data-hj-quality />
+          </label>
+        </div>
+
+        <div class="hj-preview" data-hj-preview></div>
+
+        <div class="hj-actions">
+          <a class="hj-button" data-hj-download hidden>Download JPG</a>
+          <button type="button" class="hj-button" data-hj-reset hidden>Convert another photo</button>
+        </div>
+      </div>
+    </main>
+    <script src="../dist/heic-to-jpg.js" defer></script>
+  </body>
+</html>

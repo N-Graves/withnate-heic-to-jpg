@@ -1,0 +1,49 @@
+{
+  "name": "withnate-heic-to-jpg",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Convert iPhone HEIC photos to JPG or PNG in the browser. No upload.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "vitest run",
+    "lint": "tsc --noEmit",
+    "smoke": "npm run build && node scripts/smoke.mjs",
+    "demo": "npm run build && node scripts/serve.mjs",
+    "prove": "node scripts/prove-guards.mjs"
+  },
+  "dependencies": {
+    "@nasdigitaluk/withnate-tool-core": "^0.5.0",
+    "libheif-js": "1.23.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "esbuild": "^0.24.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  },
+  "author": "Nathan Graves",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/N-Graves/withnate-heic-to-jpg.git"
+  },
+  "bugs": {
+    "url": "https://github.com/N-Graves/withnate-heic-to-jpg/issues"
+  },
+  "homepage": "https://github.com/N-Graves/withnate-heic-to-jpg#readme",
+  "keywords": [
+    "heic",
+    "heif",
+    "jpg",
+    "convert",
+    "iphone",
+    "browser",
+    "client-side",
+    "privacy",
+    "withnate"
+  ]
+}
